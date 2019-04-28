@@ -4,13 +4,15 @@
 #
 Name     : R-Rvmmin
 Version  : 2018.4.17
-Release  : 11
+Release  : 12
 URL      : https://cran.r-project.org/src/contrib/Rvmmin_2018-4.17.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Rvmmin_2018-4.17.tar.gz
 Summary  : Variable Metric Nonlinear Function Minimization
 Group    : Development/Tools
 License  : GPL-2.0+
+Requires: R-numDeriv
 BuildRequires : R-markdown
+BuildRequires : R-numDeriv
 BuildRequires : R-optextras
 BuildRequires : buildreq-R
 
@@ -25,10 +27,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552946729
+export SOURCE_DATE_EPOCH=1556467232
 
 %install
-export SOURCE_DATE_EPOCH=1552946729
+export SOURCE_DATE_EPOCH=1556467232
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -64,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  Rvmmin || :
+R CMD check --no-manual --no-examples --no-codoc Rvmmin || :
 
 
 %files
