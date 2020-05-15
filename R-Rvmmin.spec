@@ -4,7 +4,7 @@
 #
 Name     : R-Rvmmin
 Version  : 2018.4.17
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/Rvmmin_2018-4.17.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Rvmmin_2018-4.17.tar.gz
 Summary  : Variable Metric Nonlinear Function Minimization
@@ -19,21 +19,22 @@ No detailed description available
 
 %prep
 %setup -q -c -n Rvmmin
+cd %{_builddir}/Rvmmin
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569385253
+export SOURCE_DATE_EPOCH=1589575084
 
 %install
-export SOURCE_DATE_EPOCH=1569385253
+export SOURCE_DATE_EPOCH=1589575084
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
