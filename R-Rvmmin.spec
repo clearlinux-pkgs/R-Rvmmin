@@ -4,7 +4,7 @@
 #
 Name     : R-Rvmmin
 Version  : 2018.4.17.1
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/Rvmmin_2018-4.17.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/Rvmmin_2018-4.17.1.tar.gz
 Summary  : Variable Metric Nonlinear Function Minimization
